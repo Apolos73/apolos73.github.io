@@ -11,18 +11,19 @@
 <body>
 <header><div class="wrap">
   <a class="brand" href="./"><img src="clipforge-mark-64.png" alt="">ClipForge</a>
-  <nav><a href="./" aria-current="page">Início</a><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de Uso</a></nav>
+  <nav><a href="./" aria-current="page">Início</a><a href="#planos">Planos</a><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de Uso</a></nav>
 </div></header>
 
 <main class="wrap">
   <section class="hero">
     <h1>Crie, edite, publique e venda. <span class="grad">Tudo em um só lugar.</span></h1>
     <p class="lead">O ClipForge é uma plataforma completa de criação de conteúdo para Windows, com mais de 30 módulos. Ela edita vídeos e gera cortes virais, cria eBooks, cursos, séries, logos, capas e anúncios com IA, publica nas suas redes sociais e ajuda a vender e acompanhar os resultados.</p>
+    <p class="cta"><a class="btn" href="#planos">Teste grátis por 7 dias</a><a class="btn ghost" href="#planos">Ver planos</a></p>
   </section>
 
   <h2 class="sec">Criar</h2>
   <div class="grid">
-    <div class="card"><h3>Studio Pro</h3><p>Editor de vídeo com linha do tempo, legendas animadas com revisão ortográfica, enquadramento vertical automático e exportação em Full HD, 2K ou 4K.</p></div>
+    <div class="card"><h3>Studio Pro</h3><p>Editor de vídeo com linha do tempo, legendas animadas com revisão ortográfica, enquadramento vertical automático e exportação em Full HD, 2K, 4K ou 8K, com animações de entrada e saída, transições, efeitos e remoção de fundo.</p></div>
     <div class="card"><h3>Cortes virais</h3><p>Encontra os melhores momentos de um vídeo longo e gera até 30 cortes com gancho, capa, trilha sonora e imagens de apoio.</p></div>
     <div class="card"><h3>AI Creator</h3><p>eBooks, cursos, vídeos, narrações, séries, logos, thumbnails, landing pages, mini apps, produtos digitais, publicidade e prompts profissionais.</p></div>
     <div class="card"><h3>Categorias especializadas</h3><p>Geradores próprios para histórias e estudos bíblicos, pregações, terror, ciência, saúde, desenhos, animações, animes, filmes e séries, conteúdo infantil e redes sociais.</p></div>
@@ -40,6 +41,34 @@
     <div class="card"><h3>Financeiro e Previsões IA</h3><p>Acompanhe receitas e despesas e veja projeções para planejar o crescimento.</p></div>
   </div>
 
+  <section id="planos" class="planos">
+    <h2 class="sec" style="margin:0 0 10px">Planos</h2>
+    <div class="planos-top">
+      <p class="planos-h">Comece com <span class="grad">7 dias grátis</span>. Depois, escolha o seu plano.</p>
+      <div class="moeda" role="group" aria-label="Moeda">
+        <button type="button" data-moeda="BRL" aria-pressed="true">R$ Real</button>
+        <button type="button" data-moeda="USD" aria-pressed="false">US$ Dólar</button>
+      </div>
+    </div>
+    <div class="grid planos-grid">
+      <div class="card plano">
+        <p class="tag">Mensal</p>
+        <p class="valor"><span data-preco="mensal">R$ 47</span><small>/mês</small></p>
+        <p class="nota">&nbsp;</p>
+        <ul><li>Studio Pro completo e cortes virais</li><li>Exportação até 8K</li><li>Publicação e agendamento automático</li><li>Chave nova no seu e-mail a cada renovação</li></ul>
+        <a class="btn" data-comprar="mensal" href="#">Assinar mensal</a>
+      </div>
+      <div class="card plano destaque">
+        <p class="tag">Anual <span class="pill">Mais vantajoso</span></p>
+        <p class="valor"><span data-preco="anual">R$ 397</span><small>/ano</small></p>
+        <p class="nota" data-nota>Equivale a R$ 33,08/mês · economize 30%</p>
+        <ul><li>Tudo do plano mensal</li><li>12 meses pagando bem menos</li><li>Novidades e atualizações incluídas</li><li>Suporte direto com o criador</li></ul>
+        <a class="btn" data-comprar="anual" href="#">Assinar anual</a>
+      </div>
+    </div>
+    <p class="miuda">Pagamento seguro pela plataforma escolhida (Hotmart, Kiwify, Eduzz ou Stripe). A chave de licença chega no seu e-mail logo após a aprovação. Para Windows 10 e 11.</p>
+  </section>
+
   <section class="doc" style="padding-top:0;padding-left:0;padding-right:0">
     <h2>Como o ClipForge usa as suas contas</h2>
     <p>O ClipForge roda no computador do próprio usuário. Quando você conecta uma rede social, o acesso é usado <strong>somente para enviar os vídeos que você escolheu publicar</strong>, com o título, a descrição, a capa e o comentário que você revisou. Os dados de acesso ficam guardados no seu computador e não são enviados para servidores do ClipForge. Detalhes na <a href="privacidade.html">Política de Privacidade</a>.</p>
@@ -56,5 +85,27 @@
   <span>© 2026 ClipForge · Apolos Sebastião</span>
   <span><a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos de Uso</a> · <a href="mailto:apolosapolos6@gmail.com">Contato</a></span>
 </div></footer>
+<script src="vendas.js"></script>
+<script>
+(function () {
+  var V = window.CLIPFORGE_VENDAS || {};
+  var P = V.precos || { BRL: { mensal: 47, anual: 397 }, USD: { mensal: 12, anual: 99 } };
+  function fmt(v, c) { return c === "USD" ? "US$ " + v.toLocaleString("en-US", { maximumFractionDigits: 2 }) : "R$ " + v.toLocaleString("pt-BR", { maximumFractionDigits: 2 }); }
+  function show(c) {
+    document.querySelectorAll("[data-moeda]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.moeda === c)); });
+    ["mensal", "anual"].forEach(function (pl) {
+      document.querySelector('[data-preco="' + pl + '"]').textContent = fmt(P[c][pl], c);
+      var a = document.querySelector('[data-comprar="' + pl + '"]');
+      var url = (V.checkout && V.checkout[pl] && V.checkout[pl][c]) || "";
+      if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; a.textContent = (c === "USD" ? (pl === "anual" ? "Subscribe yearly" : "Subscribe monthly") : (pl === "anual" ? "Assinar anual" : "Assinar mensal")); }
+      else { a.href = "mailto:" + (V.contato || "apolosapolos6@gmail.com") + "?subject=" + encodeURIComponent("Quero o ClipForge " + pl); a.removeAttribute("target"); a.textContent = c === "USD" ? "Contact us" : "Fale conosco para assinar"; }
+    });
+    var full = P[c].mensal * 12, pct = Math.round((full - P[c].anual) / full * 100), mes = Math.round(P[c].anual / 12 * 100) / 100;
+    document.querySelector("[data-nota]").textContent = c === "USD" ? "Just " + fmt(mes, c) + "/month · save " + pct + "%" : "Equivale a " + fmt(mes, c) + "/mês · economize " + pct + "%";
+  }
+  document.querySelectorAll("[data-moeda]").forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.moeda); }); });
+  show(/^pt/i.test(navigator.language || "") ? "BRL" : "USD");
+})();
+</script>
 </body>
 </html>

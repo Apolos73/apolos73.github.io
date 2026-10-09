@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>ClipForge — conectando sua conta</title>
+<link rel="icon" href="clipforge-mark-64.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap doc" style="text-align:center">
+  <img src="clipforge-mark-64.png" alt="" width="56" height="56">
+  <h1 id="t">Voltando para o ClipForge…</h1>
+  <p class="date" id="m">Esta página só devolve a autorização para o ClipForge no seu computador.</p>
+</main>
+<script>
+// O Instagram exige um endereço HTTPS para voltar. O ClipForge roda no computador
+// do usuário (localhost, Wi-Fi ou Tailscale): esta página lê a origem que o próprio
+// ClipForge colocou no "state" e devolve o código para lá. Nada é guardado aqui.
+(function () {
+  function okOrigin(origin) {
+    try {
+      var u = new URL(origin);
+      if (!/^https?:$/.test(u.protocol) || u.pathname !== "/" || u.search || u.hash || u.username || u.password) return false;
+      var h = u.hostname;
+      return h === "localhost" || h === "127.0.0.1" || /^192\.168\.\d+\.\d+$/.test(h) || /^10\.\d+\.\d+\.\d+$/.test(h) ||
+        /^172\.(1[6-9]|2\d|3[01])\.\d+\.\d+$/.test(h) || /^100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\.\d+\.\d+$/.test(h) || /\.ts\.net$/.test(h);
+    } catch (e) { return false; }
+  }
+  var q = new URLSearchParams(location.search);
+  var state = q.get("state") || "";
+  var enc = state.split(".")[1] || "";
+  var origin = "";
+  try { origin = atob(enc.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((enc.length + 3) % 4)); } catch (e) {}
+  if (!okOrigin(origin)) {
+    document.getElementById("t").textContent = "Não reconheci de onde veio o pedido";
+    document.getElementById("m").textContent = "Abra o ClipForge e toque de novo em Conectar Instagram.";
+    return;
+  }
+  location.replace(origin.replace(/\/$/, "") + "/api/social/instagram/callback" + location.search);
+})();
+</script>
+</body>
+</html>
