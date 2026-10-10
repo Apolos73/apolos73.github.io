@@ -51,6 +51,7 @@
         </div>
         <a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/ClipForge-Setup.exe" data-download>Baixar o ClipForge</a>
       </div>
+      <p class="aviso-cel" data-aviso-cel hidden>📱 Você está no celular. O ClipForge é um programa para <strong>computador Windows</strong> — o arquivo não abre no celular. Toque no botão acima para mandar o link para o seu e-mail e abra no computador.</p>
       <ol class="passos">
         <li><strong>Baixe e abra</strong> o arquivo <code>ClipForge-Setup.exe</code>. Se o Windows mostrar <em>“O Windows protegeu o computador”</em>, clique em <strong>Mais informações → Executar assim mesmo</strong>. Esse aviso aparece com programas novos e independentes.</li>
         <li><strong>Instale</strong> e abra o ClipForge pelo atalho da área de trabalho. Os <strong>7 dias grátis</strong> começam na hora.</li>
@@ -120,6 +121,14 @@
     });
     var full = P[c].mensal * 12, pct = Math.round((full - P[c].anual) / full * 100), mes = Math.round(P[c].anual / 12 * 100) / 100;
     document.querySelector("[data-nota]").textContent = c === "USD" ? "Just " + fmt(mes, c) + "/month · save " + pct + "%" : "Equivale a " + fmt(mes, c) + "/mês · economize " + pct + "%";
+  }
+  // Celular: o instalador é só para Windows — oferece mandar o link por e-mail.
+  if (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || "")) {
+    var d = document.querySelector("[data-download]");
+    var site = location.origin + location.pathname + "#baixar";
+    d.href = "mailto:?subject=" + encodeURIComponent("Baixar o ClipForge no computador") + "&body=" + encodeURIComponent("Abra este link no computador (Windows 10 ou 11) para baixar o ClipForge:\n" + site);
+    d.textContent = "Enviar o link para o meu e-mail";
+    document.querySelector("[data-aviso-cel]").hidden = false;
   }
   document.querySelectorAll("[data-moeda]").forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.moeda); }); });
   show(/^pt/i.test(navigator.language || "") ? "BRL" : "USD");
