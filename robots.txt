@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /oauth.html
+
+Sitemap: https://apolos73.github.io/sitemap.xml
