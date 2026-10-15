@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <meta name="referrer" content="no-referrer">
-<title>ClipForge — conectando sua conta</title>
+<title>NorForge — conectando sua conta</title>
 <link rel="icon" href="clipforge-mark-64.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main class="wrap doc" style="text-align:center">
   <img src="clipforge-mark-64.png" alt="" width="56" height="56">
-  <h1 id="t">Voltando para o ClipForge…</h1>
-  <p class="date" id="m">Esta página só devolve a autorização para o ClipForge no seu computador.</p>
+  <h1 id="t">Voltando para o NorForge…</h1>
+  <p class="date" id="m">Esta página só devolve a autorização para o NorForge no seu computador.</p>
 </main>
 <script>
-// O Instagram exige um endereço HTTPS para voltar. O ClipForge roda no computador
+// O Instagram exige um endereço HTTPS para voltar. O NorForge roda no computador
 // do usuário (localhost, Wi-Fi ou Tailscale): esta página lê a origem que o próprio
-// ClipForge colocou no "state" e devolve o código para lá. Nada é guardado aqui.
+// NorForge colocou no "state" e devolve o código para lá. Nada é guardado aqui.
 (function () {
   function okOrigin(origin) {
     try {
@@ -36,7 +36,7 @@
   try { origin = atob(enc.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((enc.length + 3) % 4)); } catch (e) {}
   if (!okOrigin(origin)) {
     document.getElementById("t").textContent = "Não reconheci de onde veio o pedido";
-    document.getElementById("m").textContent = "Abra o ClipForge e toque de novo em Conectar Instagram.";
+    document.getElementById("m").textContent = "Abra o NorForge e toque de novo em Conectar Instagram.";
     return;
   }
   location.replace(origin.replace(/\/$/, "") + "/api/social/instagram/callback" + location.search);
