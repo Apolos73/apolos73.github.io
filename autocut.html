@@ -34,7 +34,7 @@
     <nav aria-label="Principal">
       <a href="autocut.html">AutoCut</a><a href="edit-viral-na-batida.html">Edit na batida</a><a href="./#studio">Editor</a><a href="./#recursos">Recursos</a><a href="./#planos">Planos</a><a href="./#faq">Dúvidas</a>
     </nav>
-    <a class="btn sm" href="./#baixar">Baixar grátis</a>
+    <a class="btn sm" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar grátis</a>
   </div>
 </header>
 
@@ -44,7 +44,7 @@
   <p class="eyebrow">AutoCut</p>
   <h1 style="font-family:Sora,Inter,sans-serif;font-size:clamp(30px,4.4vw,48px);line-height:1.12;margin:6px 0 16px">AutoCut para PC: <span class="grad">suas fotos viram um vídeo pronto</span></h1>
   <p class="lead" style="margin:0">O AutoCut do NorForge faz no computador o que você já conhece do celular: você escolhe as fotos e os vídeos, e ele entrega o vídeo editado — cortes na batida, transições, zoom, efeitos, cor e texto — com uma música em alta. Depois é só trocar de modelo até gostar e exportar.</p>
-  <div class="cta" style="justify-content:flex-start"><a class="btn" href="./#baixar">Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
+  <div class="cta" style="justify-content:flex-start"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
   <div class="duplo" style="justify-content:flex-start;margin:28px 0"><div class="celular"><img src="img/autocut/tela-midias.webp" alt="AutoCut: tela para escolher fotos e vídeos" width="540" height="1169" loading="lazy"></div><div class="celular"><img src="img/autocut/tela-fe.webp" alt="AutoCut: prévia do vídeo com a barra de modelos embaixo" width="540" height="1169" loading="lazy"></div></div>
   <h2>Como usar o AutoCut</h2><ol><li><b>Abra o AutoCut</b> em Todas as ferramentas, no editor do NorForge.</li><li><b>Selecione fotos e vídeos</b> — de 3 a 15 arquivos ficam ótimos.</li><li><b>Toque em Gerar vídeo.</b> A IA lê as mídias, escolhe a categoria e o primeiro modelo, e o vídeo aparece com as suas fotos.</li><li><b>Troque de modelo</b> na barra de baixo para ver outras versões. Cada modelo usa o seu próprio ritmo, cor e música.</li><li><b>Exporte</b> em 1080p ou 720p, ou toque em Editar para ajustar tudo na linha do tempo.</li></ol>
   <h2>120 modelos em 6 categorias</h2><p>São 20 modelos em cada categoria, cada um com capa ilustrada:</p><ul><li><b>Para você</b> — Trend do momento, Cinemático, Flash na batida, Memórias, Trailer épico, Velocity, Anime edit…</li><li><b>Fé</b> — Quem é Jesus?, Salmo 23, Batalha espiritual, Leão de Judá, Louvor, Oração, Ele vive…</li><li><b>Dia a dia</b> — Minha rotina, Vlog do dia, Fim de semana, Viagem, Café da manhã, Photo dump…</li><li><b>Motivação</b> — Foco total, Não desista, Disciplina, Mentalidade, 5 da manhã…</li><li><b>Moda e beleza</b> — Look do dia, Glam, Editorial P&amp;B, Make do dia, Passarela…</li><li><b>Esportes</b> — Highlights, No limite, Golaço, Academia, Skate, Surf, MVP…</li></ul>
@@ -60,7 +60,7 @@
 <section class="sec wrap final">
   <h2>Experimente o NorForge <span class="grad">7 dias grátis.</span></h2>
   <p class="sub">Windows 10 e 11 · sem cartão.</p>
-  <div class="cta" style="justify-content:center"><a class="btn" href="./#baixar">Baixar o NorForge</a></div>
+  <div class="cta" style="justify-content:center"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar o NorForge</a></div>
 </section>
 </main>
 
@@ -83,6 +83,12 @@
   if (!("IntersectionObserver" in window)) return;
   var io = new IntersectionObserver(function (es) { es.forEach(function (en) { var v = en.target; if (en.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } }); }, { threshold: 0.35 });
   vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+<script data-download-mobile>
+(function () {
+  if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || "")) return;
+  document.querySelectorAll("[data-download]").forEach(function (a) { a.href = "./#baixar"; });
 })();
 </script>
 </body>

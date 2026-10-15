@@ -34,7 +34,7 @@
     <nav aria-label="Principal">
       <a href="autocut.html">AutoCut</a><a href="edit-viral-na-batida.html">Edit na batida</a><a href="./#studio">Editor</a><a href="./#recursos">Recursos</a><a href="./#planos">Planos</a><a href="./#faq">Dúvidas</a>
     </nav>
-    <a class="btn sm" href="./#baixar">Baixar grátis</a>
+    <a class="btn sm" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar grátis</a>
   </div>
 </header>
 
@@ -44,7 +44,7 @@
   <p class="eyebrow">Edit viral na batida</p>
   <h1 style="font-family:Sora,Inter,sans-serif;font-size:clamp(30px,4.4vw,48px);line-height:1.12;margin:6px 0 16px">Edit viral <span class="grad">na batida da música</span>, automático</h1>
   <p class="lead" style="margin:0">Escolha fotos ou vídeos e uma música: o NorForge encontra as batidas, os compassos e o drop e monta o edit inteiro no ritmo — cortes secos, zoom-soco, tremor, flash, velocidade e transições — no estilo que você escolher.</p>
-  <div class="cta" style="justify-content:flex-start"><a class="btn" href="./#baixar">Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
+  <div class="cta" style="justify-content:flex-start"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
   <div class="estilos" style="margin:24px 0"><figure class="leg"><video src="img/edit/phonk.mp4" poster="img/edit/phonk.jpg" muted loop playsinline preload="none" aria-label="Phonk"></video><figcaption>Phonk</figcaption></figure><figure class="leg"><video src="img/edit/hardstyle.mp4" poster="img/edit/hardstyle.jpg" muted loop playsinline preload="none" aria-label="Hardstyle"></video><figcaption>Hardstyle</figcaption></figure><figure class="leg"><video src="img/edit/manga.mp4" poster="img/edit/manga.jpg" muted loop playsinline preload="none" aria-label="Manga"></video><figcaption>Manga</figcaption></figure><figure class="leg"><video src="img/edit/jugg.mp4" poster="img/edit/jugg.jpg" muted loop playsinline preload="none" aria-label="Jugg"></video><figcaption>Jugg</figcaption></figure><figure class="leg"><video src="img/edit/vsp.mp4" poster="img/edit/vsp.jpg" muted loop playsinline preload="none" aria-label="VSP"></video><figcaption>VSP</figcaption></figure><figure class="leg"><video src="img/edit/flow.mp4" poster="img/edit/flow.jpg" muted loop playsinline preload="none" aria-label="Flow"></video><figcaption>Flow</figcaption></figure><figure class="leg"><video src="img/edit/block.mp4" poster="img/edit/block.jpg" muted loop playsinline preload="none" aria-label="Block"></video><figcaption>Block</figcaption></figure><figure class="leg"><video src="img/edit/mograph.mp4" poster="img/edit/mograph.jpg" muted loop playsinline preload="none" aria-label="Mograph"></video><figcaption>Mograph</figcaption></figure></div>
   <h2>Os 12 estilos</h2><ul><li><b>Automático</b> — escolhe o estilo pelo clima da música.</li><li><b>Phonk</b> — escuro, zoom-soco, estrobo e tremor.</li><li><b>Energia</b> — deslizes rápidos e cor forte.</li><li><b>Emotivo</b> — fusões lentas e câmera lenta.</li><li><b>Hardstyle</b> — flash em toda batida e soco fortíssimo.</li><li><b>Manga</b> — preto e branco com traço de nanquim.</li><li><b>Comp</b> — fusões, brilho e luz que respira.</li><li><b>Flow</b> — tudo fluido, velocity e borrão de movimento.</li><li><b>Jugg</b> — o mais agressivo: giro, tremor e cortes curtíssimos.</li><li><b>VSP</b> — cores que mudam na batida e neon.</li><li><b>Block</b> — a imagem se divide em blocos 2×2 e 3×3.</li><li><b>Mograph</b> — faixas de cinema e texto cinético.</li></ul><p>Cada estilo tem prévia na tela: você vê como vai ficar antes de criar.</p>
   <h2>Como o NorForge corta na batida</h2><p>A música é analisada no seu computador: o NorForge mede o andamento (BPM), marca cada batida e cada início de compasso e encontra o <b>drop</b> — o momento em que a música explode. O edit começa na subida, entra forte no drop e termina com a música desaparecendo suavemente. Você ainda vê a linha do ritmo com as batidas e os cortes antes de renderizar.</p>
@@ -58,7 +58,7 @@
 <section class="sec wrap final">
   <h2>Experimente o NorForge <span class="grad">7 dias grátis.</span></h2>
   <p class="sub">Windows 10 e 11 · sem cartão.</p>
-  <div class="cta" style="justify-content:center"><a class="btn" href="./#baixar">Baixar o NorForge</a></div>
+  <div class="cta" style="justify-content:center"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar o NorForge</a></div>
 </section>
 </main>
 
@@ -81,6 +81,12 @@
   if (!("IntersectionObserver" in window)) return;
   var io = new IntersectionObserver(function (es) { es.forEach(function (en) { var v = en.target; if (en.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } }); }, { threshold: 0.35 });
   vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+<script data-download-mobile>
+(function () {
+  if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || "")) return;
+  document.querySelectorAll("[data-download]").forEach(function (a) { a.href = "./#baixar"; });
 })();
 </script>
 </body>

@@ -34,7 +34,7 @@
     <nav aria-label="Principal">
       <a href="autocut.html">AutoCut</a><a href="edit-viral-na-batida.html">Edit na batida</a><a href="./#studio">Editor</a><a href="./#recursos">Recursos</a><a href="./#planos">Planos</a><a href="./#faq">Dúvidas</a>
     </nav>
-    <a class="btn sm" href="./#baixar">Baixar grátis</a>
+    <a class="btn sm" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar grátis</a>
   </div>
 </header>
 
@@ -44,7 +44,7 @@
   <p class="eyebrow">Fé</p>
   <h1 style="font-family:Sora,Inter,sans-serif;font-size:clamp(30px,4.4vw,48px);line-height:1.12;margin:6px 0 16px">Vídeos cristãos e para igreja <span class="grad">com edição cinematográfica</span></h1>
   <p class="lead" style="margin:0">Selecione as fotos e os vídeos do culto, do ministério ou do seu devocional. O NorForge reconhece que o conteúdo é de fé e monta um vídeo cinematográfico — câmera em movimento, luz dourada, frases bíblicas em cada cena e uma trilha cristã épica.</p>
-  <div class="cta" style="justify-content:flex-start"><a class="btn" href="./#baixar">Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
+  <div class="cta" style="justify-content:flex-start"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
   <div class="duplo" style="justify-content:flex-start;margin:28px 0"><div class="celular"><video src="img/autocut/demo-fe.mp4" poster="img/autocut/demo-fe.jpg" muted loop playsinline preload="none" controls aria-label="Vídeo cristão feito pelo AutoCut"></video></div><div class="celular"><img src="img/autocut/tela-fe.webp" alt="A IA do NorForge reconheceu fotos de fé e escolheu trilha cristã" width="540" height="1169" loading="lazy"></div></div>
   <h2>A IA reconhece conteúdo de fé</h2><p>Igreja, cruz, mãos em oração, Bíblia aberta, louvor e adoração: quando a maior parte das fotos é desse tema, o AutoCut abre a categoria <b>Fé</b> e escolhe automaticamente uma <b>trilha cristã épica</b>. Tudo isso roda no seu computador, sem enviar suas fotos para a internet.</p>
   <h2>20 modelos de fé</h2><p>Quem é Jesus?, Salmo 23, Fé que move, Batalha espiritual, Leão de Judá, Louvor, Oração, Graça, Gratidão, Ele vive, Milagre, Céu aberto, Dia de culto, Testemunho, Promessa, Deus no controle, Tudo novo, Trailer bíblico, Adoração e Guerreiro de oração.</p><div class="capas"><figure><img src="img/autocut/ac-fe-quem-e-jesus.jpg" alt="Modelo cristão do AutoCut" width="300" height="533" loading="lazy"></figure><figure><img src="img/autocut/ac-fe-salmo23.jpg" alt="Modelo cristão do AutoCut" width="300" height="533" loading="lazy"></figure><figure><img src="img/autocut/ac-fe-louvor.jpg" alt="Modelo cristão do AutoCut" width="300" height="533" loading="lazy"></figure></div>
@@ -58,7 +58,7 @@
 <section class="sec wrap final">
   <h2>Experimente o NorForge <span class="grad">7 dias grátis.</span></h2>
   <p class="sub">Windows 10 e 11 · sem cartão.</p>
-  <div class="cta" style="justify-content:center"><a class="btn" href="./#baixar">Baixar o NorForge</a></div>
+  <div class="cta" style="justify-content:center"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar o NorForge</a></div>
 </section>
 </main>
 
@@ -81,6 +81,12 @@
   if (!("IntersectionObserver" in window)) return;
   var io = new IntersectionObserver(function (es) { es.forEach(function (en) { var v = en.target; if (en.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } }); }, { threshold: 0.35 });
   vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+<script data-download-mobile>
+(function () {
+  if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || "")) return;
+  document.querySelectorAll("[data-download]").forEach(function (a) { a.href = "./#baixar"; });
 })();
 </script>
 </body>

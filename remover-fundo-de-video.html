@@ -34,7 +34,7 @@
     <nav aria-label="Principal">
       <a href="autocut.html">AutoCut</a><a href="edit-viral-na-batida.html">Edit na batida</a><a href="./#studio">Editor</a><a href="./#recursos">Recursos</a><a href="./#planos">Planos</a><a href="./#faq">Dúvidas</a>
     </nav>
-    <a class="btn sm" href="./#baixar">Baixar grátis</a>
+    <a class="btn sm" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar grátis</a>
   </div>
 </header>
 
@@ -44,7 +44,7 @@
   <p class="eyebrow">Remover fundo</p>
   <h1 style="font-family:Sora,Inter,sans-serif;font-size:clamp(30px,4.4vw,48px);line-height:1.12;margin:6px 0 16px">Remover fundo de vídeo <span class="grad">sem tela verde</span></h1>
   <p class="lead" style="margin:0">Grave em qualquer lugar: a IA do NorForge separa a pessoa (ou o produto) do fundo, quadro a quadro, e você troca o cenário por uma cor, uma imagem, outro vídeo ou um desfoque — sem tela verde e sem enviar o vídeo para a internet.</p>
-  <div class="cta" style="justify-content:flex-start"><a class="btn" href="./#baixar">Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
+  <div class="cta" style="justify-content:flex-start"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
   <figure><img src="img/studio-desk.webp" alt="Editor do NorForge com a linha do tempo e a prévia" width="1800" height="1013" loading="lazy"><figcaption>Editor do NorForge com a linha do tempo e a prévia</figcaption></figure>
   <h2>Como remover o fundo</h2><ol><li>Selecione o clipe na linha do tempo.</li><li>Abra <b>Remover fundo</b> e escolha <b>Pessoa</b> ou <b>Objeto ou produto</b>.</li><li>Escolha o novo fundo: cor, imagem, vídeo, desfocado ou transparente (para usar como camada).</li><li>Confira na prévia e exporte.</li></ol>
   <h2>Pessoas e objetos</h2><p>Para pessoas, o NorForge usa uma IA de recorte de vídeo que mantém cabelo e contorno estáveis entre os quadros. Para produtos e objetos, um segundo modelo cuida do recorte. Também há <b>chroma key</b> para quem já grava com fundo verde ou azul.</p>
@@ -57,7 +57,7 @@
 <section class="sec wrap final">
   <h2>Experimente o NorForge <span class="grad">7 dias grátis.</span></h2>
   <p class="sub">Windows 10 e 11 · sem cartão.</p>
-  <div class="cta" style="justify-content:center"><a class="btn" href="./#baixar">Baixar o NorForge</a></div>
+  <div class="cta" style="justify-content:center"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar o NorForge</a></div>
 </section>
 </main>
 
@@ -80,6 +80,12 @@
   if (!("IntersectionObserver" in window)) return;
   var io = new IntersectionObserver(function (es) { es.forEach(function (en) { var v = en.target; if (en.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } }); }, { threshold: 0.35 });
   vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+<script data-download-mobile>
+(function () {
+  if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || "")) return;
+  document.querySelectorAll("[data-download]").forEach(function (a) { a.href = "./#baixar"; });
 })();
 </script>
 </body>

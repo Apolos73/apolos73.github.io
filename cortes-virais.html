@@ -34,7 +34,7 @@
     <nav aria-label="Principal">
       <a href="autocut.html">AutoCut</a><a href="edit-viral-na-batida.html">Edit na batida</a><a href="./#studio">Editor</a><a href="./#recursos">Recursos</a><a href="./#planos">Planos</a><a href="./#faq">Dúvidas</a>
     </nav>
-    <a class="btn sm" href="./#baixar">Baixar grátis</a>
+    <a class="btn sm" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar grátis</a>
   </div>
 </header>
 
@@ -44,7 +44,7 @@
   <p class="eyebrow">Cortes virais</p>
   <h1 style="font-family:Sora,Inter,sans-serif;font-size:clamp(30px,4.4vw,48px);line-height:1.12;margin:6px 0 16px">Cortes virais <span class="grad">no automático</span></h1>
   <p class="lead" style="margin:0">Tem uma live, um podcast ou uma pregação longa? O NorForge encontra os melhores momentos e entrega até 30 cortes prontos para postar — com gancho, capa, legenda, trilha e enquadramento vertical que acompanha o rosto.</p>
-  <div class="cta" style="justify-content:flex-start"><a class="btn" href="./#baixar">Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
+  <div class="cta" style="justify-content:flex-start"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar e testar grátis</a><a class="btn ghost" href="./#planos">Ver planos</a></div>
   <figure><img src="img/slide/cortes.webp" alt="Cortes virais gerados pelo NorForge" width="1600" height="900" loading="lazy"><figcaption>Cortes virais gerados pelo NorForge</figcaption></figure>
   <h2>O que vem em cada corte</h2><ul><li><b>Gancho</b> nos primeiros segundos para segurar quem está rolando o feed.</li><li><b>Capa</b> com título, sem tampar o rosto.</li><li><b>Legenda automática</b> animada.</li><li><b>Trilha</b> no volume certo, abaixo da voz.</li><li><b>Vídeos e imagens de apoio</b> nos momentos certos.</li><li><b>Vertical 9:16</b> com o enquadramento seguindo o rosto.</li></ul>
   <h2>Como funciona</h2><ol><li>Importe o vídeo longo.</li><li>Escolha quantos cortes quer (até 30) ou deixe no automático, que separa só os melhores.</li><li>Revise cada corte: ajuste o começo e o fim, o gancho e a capa.</li><li>Exporte em Full HD, 2K ou 4K e publique.</li></ol>
@@ -57,7 +57,7 @@
 <section class="sec wrap final">
   <h2>Experimente o NorForge <span class="grad">7 dias grátis.</span></h2>
   <p class="sub">Windows 10 e 11 · sem cartão.</p>
-  <div class="cta" style="justify-content:center"><a class="btn" href="./#baixar">Baixar o NorForge</a></div>
+  <div class="cta" style="justify-content:center"><a class="btn" href="https://github.com/Apolos73/apolos73.github.io/releases/latest/download/NorForge-Setup.exe" data-download>Baixar o NorForge</a></div>
 </section>
 </main>
 
@@ -80,6 +80,12 @@
   if (!("IntersectionObserver" in window)) return;
   var io = new IntersectionObserver(function (es) { es.forEach(function (en) { var v = en.target; if (en.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } }); }, { threshold: 0.35 });
   vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+<script data-download-mobile>
+(function () {
+  if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || "")) return;
+  document.querySelectorAll("[data-download]").forEach(function (a) { a.href = "./#baixar"; });
 })();
 </script>
 </body>
