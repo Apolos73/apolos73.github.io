@@ -6,5 +6,5 @@ window.CLIPFORGE_VENDAS = {
     mensal: { BRL: "https://pay.hotmart.com/H107965981H?off=ps75f5md", USD: "https://pay.hotmart.com/H107965981H?off=1snmbbfl" },
     anual: { BRL: "https://pay.hotmart.com/H107965981H?off=5hpsh6vf", USD: "https://pay.hotmart.com/H107965981H?off=4xd6yewi" }
   },
-  contato: "clipforgeoficialbr@gmail.com"
+  contato: "norforgeoficial@gmail.com"
 };
