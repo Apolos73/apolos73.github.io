@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /oauth.html
 
-Sitemap: https://apolos73.github.io/sitemap.xml
+Sitemap: https://norforge.com.br/sitemap.xml
